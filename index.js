@@ -1,7 +1,7 @@
 function animateDesignTitle() {
     /* title animation */
 
-    const titles = ["Full Stack Developer", "AI Engineer", "Data Engineer", "Python Developer"];
+    const titles = ["Full Stack Developer", "Data Scientist", "Data Engineer", "Python Developer"];
     const animationTime = 50;
     const spanTitle = document.querySelector("#design-title");
     var titleIdx = 0;
@@ -61,7 +61,7 @@ function animateDesignTitle() {
             }
         }
 
-        
+
         // remove text
         spanTitle.textContent = "";
         // animate starting word
