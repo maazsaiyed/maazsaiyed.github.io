@@ -17,18 +17,19 @@ function animateDesignTitle() {
         function animateIn(word) {
             /* Add the word to the span title. */
             spanTitle.innerHTML = word.split("").map(ele => `<span>${ele}</span>`).join("");
-            var idx = 0;
+            const n = spanTitle.children.length;
+            var idx = Math.floor(n / 2);
             var animationInterval = setInterval(addChar, animationTime);
 
             function addChar() {
                 try {
-                    if (idx < spanTitle.children.length) {
-                        const charSpan = spanTitle.children[idx];
-                        charSpan.classList.add("fade");
+                    if (idx < n) {
+                        spanTitle.children[idx].classList.add("fade");
+                        spanTitle.children[n - idx - 1].classList.add("fade");
                         idx++;
                     } else {
                         removeInterval(animationInterval);
-                        setTimeout(animateOut, 1000);
+                        setTimeout(animateOut, 1500);
                     }
                 } catch (error) {
                     removeInterval(animationInterval);
@@ -39,20 +40,21 @@ function animateDesignTitle() {
 
         function animateOut() {
             /* Removes the word to the span title. */
+            const n = spanTitle.children.length;
             var idx = spanTitle.children.length - 1;
             var animationInterval = setInterval(removeChar, animationTime);
 
             function removeChar() {
                 try {
-                    if (-1 < idx) {
-                        const charSpan = spanTitle.children[idx];
-                        charSpan.classList.remove("fade");
+                    if (Math.floor(n / 2) < idx) {
+                        spanTitle.children[idx].classList.remove("fade");
+                        spanTitle.children[n - idx - 1].classList.remove("fade");
                         idx--;
                     } else {
                         removeInterval(animationInterval);
                         spanTitle.textContent = "";
                         // animate next title
-                        setTimeout(animateIn(titles[++titleIdx % titles.length]), 100);
+                        setTimeout(animateIn(titles[++titleIdx % titles.length]), 700);
                     }
                 } catch (error) {
                     removeInterval(animationInterval);
