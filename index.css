@@ -20,9 +20,6 @@ body {
     color: var(--theme-text-color);
 }
 
-
-
-
 #container-header {
     height: 100vh;
     display: flex;
@@ -33,7 +30,8 @@ body {
         text-align: center;
 
         h1 {
-            font-size: 3rem;
+            font-size: 4rem;
+            word-spacing: 15px;
         }
 
         h2 {
@@ -72,16 +70,18 @@ body {
     }
 }
 
+.container-header {
+    font-size: 3rem;
+    text-align: center;
+}
+
 #container-skills {
     height: 100vh;
     padding: 3rem;
 
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
     #sub-container-skills {
+        max-width: 1000px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
@@ -90,15 +90,14 @@ body {
         div {
             min-width: 30%;
             line-height: 2rem;
-            border: 1px solid var(--theme-text-color);
-            border-radius: 20px;
-            padding: 30px 50px;
+            border-radius: 10px;
+            padding: 3rem;
             margin-top: 2em;
+            background-color: rgba(256, 256, 256, 0.1);
 
             h2 {
                 font-size: 1.5rem;
                 color: var(--primary-color);
-                border-bottom: 1px solid var(--theme-text-color);
             }
 
             ul {
@@ -107,5 +106,53 @@ body {
             }
         }
     }
+}
 
+#container-experience {
+    height: 100vh;
+    padding: 3rem 0;
+
+    #sub-container-experience {
+        width: 1000px;
+        margin: 0 auto;
+
+        li {
+            list-style: none;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            line-height: 1.7rem;
+
+            .time-frame {
+                width: 25%;
+                padding: 1.7rem 0;
+            }
+
+            .experience-details {
+                width: 75%;
+                text-align: justify;
+
+                h3 {
+                    color: var(--primary-color);
+                    margin-bottom: .5rem;
+                }
+
+                h4 {
+                    margin-bottom: .3rem;
+                }
+
+                div {
+                    margin-bottom: 3rem;
+                    border-radius: 10px;
+                    padding: 1.7rem;
+
+                }
+
+                div:hover {
+                    background-color: rgba(256, 256, 256, 0.1);
+                    transition: all 0.25s ease-in;
+                }
+            }
+        }
+    }
 }
