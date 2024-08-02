@@ -21,7 +21,7 @@ body {
 }
 
 #container-header {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@ body {
 }
 
 #container-skills {
-    height: 100vh;
+    min-height: 100vh;
     padding: 3rem;
 
     #sub-container-skills {
@@ -109,7 +109,7 @@ body {
 }
 
 #container-experience {
-    height: 100vh;
+    min-height: 100vh;
     padding: 3rem 0;
 
     #sub-container-experience {
