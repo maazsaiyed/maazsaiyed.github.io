@@ -36,6 +36,7 @@ body {
 
         h2 {
             font-size: 2.5rem;
+            margin-top: 1rem;
         }
 
         #design-title {
@@ -52,13 +53,12 @@ body {
     }
 
     #row-social-icons {
-        padding: 3rem 0;
+        margin-top: 3rem;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
 
         .social-icon {
-            margin-right: 30px;
             color: var(--theme-text-color);
             font-size: 1.5rem;
         }
@@ -113,7 +113,7 @@ body {
     padding: 3rem 0;
 
     #sub-container-experience {
-        width: 1000px;
+        max-width: 1000px;
         margin: 0 auto;
 
         li {
@@ -145,12 +145,7 @@ body {
                     margin-bottom: 3rem;
                     border-radius: 10px;
                     padding: 1.7rem;
-
-                }
-
-                div:hover {
                     background-color: rgba(256, 256, 256, 0.1);
-                    transition: all 0.25s ease-in;
                 }
             }
         }
