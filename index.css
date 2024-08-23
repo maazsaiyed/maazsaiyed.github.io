@@ -20,11 +20,49 @@ body {
     color: var(--theme-text-color);
 }
 
+/************************************************* 
+Navigation Bar
+**************************************************/
+nav {
+    background-color: rgba(256, 256, 256, 0.1);
+    position: fixed;
+
+    ul {
+        width: 100vw;
+        padding: 1rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+
+
+        a {
+            padding: 1rem;
+            color: var(--theme-text-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: rgba(256, 256, 256, 0.2);
+            transition: all 0.3s ease-in;
+        }
+
+        #space-between {
+            flex: 2;
+        }
+
+    }
+}
+
+/************************************************* 
+Header Container
+**************************************************/
+
 #container-header {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem 3rem;
 
     #row-title {
         text-align: center;
@@ -75,9 +113,13 @@ body {
     text-align: center;
 }
 
+/************************************************* 
+Skills Container
+**************************************************/
+
 #container-skills {
     min-height: 100vh;
-    padding: 3rem;
+    padding: 5rem 3rem;
 
     #sub-container-skills {
         max-width: 1000px;
@@ -103,14 +145,32 @@ body {
             ul {
                 font-size: 1.2rem;
                 margin-top: 10px;
+                list-style: none;
+
+                li {
+                    margin-bottom: .75rem;
+                }
+
+                .img-skills-icons {
+                    width: 2rem;
+                    float: left;
+                    margin-right: 15px;
+                    border-radius: 3px;
+                    padding: .2rem;
+                    background-color: var(--theme-text-color);
+                }
             }
         }
     }
 }
 
+/************************************************* 
+Experience Container
+**************************************************/
+
 #container-experience {
     min-height: 100vh;
-    padding: 3rem 0;
+    padding: 5rem 3rem;
 
     #sub-container-experience {
         max-width: 1000px;
