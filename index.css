@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --primary-light-color: #4B70F5;
+    --primary-light-color: #0E86D4;
     --primary-dark-color: #f50057;
     --light-color: #fafafa;
     --dark-color: #000000;
@@ -29,12 +29,13 @@ body {
 Navigation Bar
 **************************************************/
 nav {
-    background-color: rgb(127, 127, 127, 0.3);
+    background-color: var(--dark-color);
+    color: var(--light-color);
     position: fixed;
 
     ul {
         width: 100vw;
-        padding: 1rem;
+        padding: 1rem 0;
         list-style: none;
         display: flex;
         justify-content: space-evenly;
@@ -44,6 +45,7 @@ nav {
             padding: 1rem;
             text-decoration: none;
             color: inherit;
+            font-size: 1.2rem;
         }
 
         a:hover {
@@ -162,6 +164,7 @@ Skills Container
                     margin-right: 15px;
                     border-radius: 3px;
                     padding: .2rem;
+                    background-color: rgba(256, 256, 256, 1);
                 }
             }
         }
