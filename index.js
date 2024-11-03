@@ -70,3 +70,21 @@ function animateDesignTitle() {
         animateIn(titles[titleIdx]);
     }
 }
+
+function toggleTheme() {
+    /* toggle theme between light and dark */
+    
+    let bodyObj = document.getElementsByTagName("body");
+    if (bodyObj.length > 0) {
+        bodyObj = bodyObj[0];
+        let button = document.getElementById("toggle-light-dark");
+
+        if (bodyObj.style.colorScheme == "light") {
+            bodyObj.style.colorScheme = "dark";
+            button.className = "bi bi-brightness-high-fill";
+        } else {
+            bodyObj.style.colorScheme = "light";
+            button.className = "bi bi-moon-fill";
+        }
+    }
+}
