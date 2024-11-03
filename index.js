@@ -1,7 +1,7 @@
 function animateDesignTitle() {
     /* title animation */
 
-    const titles = ["Full Stack Developer", "Data Scientist", "Data Engineer", "Python Developer"];
+    const titles = ["Full Stack Developer", "Python Developer", "Data & AI Engineer"];
     const animationTime = 50;
     const spanTitle = document.querySelector("#design-title");
     var titleIdx = 0;
