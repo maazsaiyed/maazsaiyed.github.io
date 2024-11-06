@@ -112,7 +112,9 @@ Header Container
 
         .social-icon {
             color: var(--theme-text-color);
+            fill: var(--theme-text-color);
             font-size: 1.5rem;
+            height: 1.5rem;
         }
 
         .social-icon:hover {
@@ -227,6 +229,44 @@ Experience Container
                     background-color: rgb(127, 127, 127, 0.2);
                 }
             }
+        }
+    }
+}
+
+
+/************************************************* 
+Project Container
+**************************************************/
+
+#container-project {
+    min-height: 100vh;
+    padding: 5rem 3rem;
+
+    #sub-container-project {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+
+        .card-project-container {
+            width: 30%;
+            height: 15rem;
+            padding: 1.7rem;
+            border-radius: 10px;
+            background-color: rgb(127, 127, 127, 0.2);
+
+            .card-header {
+                a {
+                    text-decoration: none;
+                    color: var(--theme-primary-color);
+                    font-size: 1.2rem;
+                }
+            }
+
+            .card-description {
+                margin-top: .5rem;
+            }
+
         }
     }
 }
