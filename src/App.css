@@ -1,0 +1,22 @@
+#design-title {
+  span {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .fade {
+    opacity: 1;
+  }
+}
+
+.glass {
+  background: rgba(245, 237, 237, 0.46);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+}
+
+.social-icon {
+  cursor: pointer;
+}

@@ -1,0 +1,1 @@
+export const headlineTitles = ["Full Stack Developer", "Python Developer", "Data & AI Engineer"];
