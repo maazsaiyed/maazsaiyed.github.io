@@ -135,9 +135,9 @@ export default function AboutMe() {
 
 
             <Space className="animate__animated animate__fadeInUp animate__delay-2s" size="large" style={{ marginTop: 25 }}>
-                <ReactSVG className="social-icon" src="icons/social-icons/linkedin.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("linkedin")} />
-                <ReactSVG className="social-icon" src="icons/social-icons/github.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("github")} />
-                <ReactSVG className="social-icon" src="icons/social-icons/leetcode.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("leetcode")} />
+                <ReactSVG className="social-icon" src="resources/social-icons/linkedin.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("linkedin")} />
+                <ReactSVG className="social-icon" src="resources/social-icons/github.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("github")} />
+                <ReactSVG className="social-icon" src="resources/social-icons/leetcode.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("leetcode")} />
             </Space>
         </Flex >
     );

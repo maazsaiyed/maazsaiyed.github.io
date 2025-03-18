@@ -2,29 +2,29 @@ export const skillsData = [
     {
         displayName: "Programming Languages",
         skills: [
-            { displayName: "Python", icon: "icons/python.svg" },
-            { displayName: "JavaScript", icon: "icons/javascript.svg" },
-            { displayName: "TypeScript", icon: "icons/typescript.svg" },
-            { displayName: "Java", icon: "icons/java.svg" },
+            { displayName: "Python", icon: "resources/skill-icons/python.svg" },
+            { displayName: "JavaScript", icon: "resources/skill-icons/javascript.svg" },
+            { displayName: "TypeScript", icon: "resources/skill-icons/typescript.svg" },
+            { displayName: "Java", icon: "resources/skill-icons/java.svg" },
         ]
     }, {
         displayName: "Web Development",
         skills: [
-            { displayName: "React", icon: "icons/react.svg" },
-            { displayName: "Angular", icon: "icons/angular.svg" },
-            { displayName: "Django", icon: "icons/django.svg" },
-            { displayName: "Flask", icon: "icons/flask.svg" },
-            { displayName: "Nodejs", icon: "icons/nodejs.svg" },
-            { displayName: "MySQL", icon: "icons/mysql.svg" },
-            { displayName: "Postgres", icon: "icons/postgresql.svg" },
+            { displayName: "React", icon: "resources/skill-icons/react.svg" },
+            { displayName: "Angular", icon: "resources/skill-icons/angular.svg" },
+            { displayName: "Django", icon: "resources/skill-icons/django.svg" },
+            { displayName: "Flask", icon: "resources/skill-icons/flask.svg" },
+            { displayName: "Nodejs", icon: "resources/skill-icons/nodejs.svg" },
+            { displayName: "MySQL", icon: "resources/skill-icons/mysql.svg" },
+            { displayName: "Postgres", icon: "resources/skill-icons/postgresql.svg" },
         ]
     }, {
         displayName: "Cloud, Big Data & AI",
         skills: [
-            { displayName: "Spark", icon: "icons/spark.svg" },
-            { displayName: "Tensorflow", icon: "icons/tensorflow.svg" },
-            { displayName: "AWS", icon: "icons/aws.svg" },
-            { displayName: "Azure", icon: "icons/azure.svg" },
+            { displayName: "Spark", icon: "resources/skill-icons/spark.svg" },
+            { displayName: "Tensorflow", icon: "resources/skill-icons/tensorflow.svg" },
+            { displayName: "AWS", icon: "resources/skill-icons/aws.svg" },
+            { displayName: "Azure", icon: "resources/skill-icons/azure.svg" },
         ]
     }
 ];
