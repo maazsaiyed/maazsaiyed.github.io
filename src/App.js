@@ -10,7 +10,9 @@ function App() {
     <ConfigProvider
       theme={{
         token: {
+          colorText: '#1C1C1C',
           colorPrimary: '#1D4ED8',
+          fontFamily: 'Inter'
         },
       }}>
       <Space direction='vertical' size="large" style={{ width: "100vw" }}>

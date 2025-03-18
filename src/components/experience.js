@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import { experienceData } from "../resources/experiencedata";
 import { Divider, Space, Timeline, Typography } from "antd";
 
@@ -13,23 +14,27 @@ export default function Experience() {
         .map((ed, idx) => ({
             key: ed.id,
             children: (
-                <Space
-                    className={
-                        (idx % 2 == 0)
+                <AnimationOnScroll
+                    animateIn={
+                        (idx % 2 === 0)
                             ? "animate__animated animate__fadeInRight"
                             : "animate__animated animate__fadeInLeft"
                     }
-                    direction="vertical"
-                    size="small"
-                    style={expCSS}
+                    animateOnce={true}
                 >
-                    <Title level={4} style={titleCSS}>{ed.title}</Title>
-                    <Title level={5} style={titleCSS}>{ed.company} | {ed.timeline}</Title>
+                    <Space
+                        direction="vertical"
+                        size="small"
+                        style={expCSS}
+                    >
+                        <Title level={4} style={titleCSS}>{ed.title}</Title>
+                        <Title level={5} style={titleCSS}>{ed.company} | {ed.timeline}</Title>
 
-                    <Divider style={titleCSS} />
+                        <Divider style={titleCSS} />
 
-                    <Text>{ed.description}</Text>
-                </Space >
+                        <Text>{ed.description}</Text>
+                    </Space >
+                </AnimationOnScroll>
             )
         }));
 

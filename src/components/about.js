@@ -1,8 +1,7 @@
-import { Flex, Typography } from "antd";
-import { useRef, useState } from "react";
-import { headlineTitles } from "../resources/headline";
-import { theme as antdTheme } from 'antd';
+import { theme as antdTheme, Flex, Space, Typography } from "antd";
+import { useRef } from "react";
 import { ReactSVG } from "react-svg";
+import { headlineTitles } from "../resources/headline";
 
 const { Text, Title } = Typography;
 const { useToken } = antdTheme;
@@ -20,7 +19,7 @@ const socialNavigation = function (icon) {
     else if (icon === "github") url = "https://github.com/maazsaiyed";
     else if (icon === "leetcode") url = "https://leetcode.com/u/maazsaiyed34/";
 
-    if (url != undefined) window.open(url, "_blank");
+    if (url !== undefined) window.open(url, "_blank");
 }
 
 export default function AboutMe() {
@@ -53,7 +52,7 @@ export default function AboutMe() {
                 function addChar() {
                     try {
                         if (idx < n) {
-                            spanTitle.children[idx].classList.add("fade");
+                            spanTitle.children[idx]?.classList.add("fade");
                             idx++;
                         } else {
                             removeInterval(animationInterval);
@@ -74,7 +73,7 @@ export default function AboutMe() {
                 function removeChar() {
                     try {
                         if (-1 < idx) {
-                            spanTitle.children[idx].classList.remove("fade");
+                            spanTitle.children[idx]?.classList.remove("fade");
                             idx--;
                         } else {
                             removeInterval(animationInterval);
@@ -117,7 +116,6 @@ export default function AboutMe() {
             <Title
                 id="design-title"
                 ref={titleRef}
-                // className="typewriter-animation"
                 level={2}
                 style={{
                     ...titleCSS, ...{
@@ -136,11 +134,11 @@ export default function AboutMe() {
             </Text>
 
 
-            <Flex className="animate__animated animate__fadeInUp animate__delay-2s" justify="space-evenly" style={{ marginTop: 25 }}>
+            <Space className="animate__animated animate__fadeInUp animate__delay-2s" size="large" style={{ marginTop: 25 }}>
                 <ReactSVG className="social-icon" src="icons/social-icons/linkedin.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("linkedin")} />
                 <ReactSVG className="social-icon" src="icons/social-icons/github.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("github")} />
                 <ReactSVG className="social-icon" src="icons/social-icons/leetcode.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("leetcode")} />
-            </Flex>
+            </Space>
         </Flex >
     );
 }
