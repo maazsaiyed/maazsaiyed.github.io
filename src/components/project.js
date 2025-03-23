@@ -3,9 +3,14 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const { Text, Title } = Typography;
 
-export default function Project() {
+export default function Project(props) {
     return (
-        <Flex vertical gap="large" style={{ minHeight: "100vh", padding: "0 20%" }}>
+        <Flex
+            vertical
+            gap="large"
+            style={{ minHeight: "100vh", padding: "7em 20% 0" }}
+            ref={props.projectRef ? props.projectRef : null}
+        >
             <Title style={{ textAlign: "center" }}>Projects</Title>
 
             <AnimationOnScroll animateIn="animate__animated animate__fadeInUp" animateOnce>

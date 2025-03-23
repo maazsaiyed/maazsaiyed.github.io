@@ -22,7 +22,7 @@ const socialNavigation = function (icon) {
     if (url !== undefined) window.open(url, "_blank");
 }
 
-export default function AboutMe() {
+export default function AboutMe(props) {
 
     const titleRef = useRef(null);
 
@@ -107,7 +107,9 @@ export default function AboutMe() {
             style={{
                 minHeight: "100vh",
                 padding: "0 20%"
-            }}>
+            }}
+            ref={props.aboutMeRef ? props.aboutMeRef : null}
+        >
 
             <Title level={5} style={titleCSS}>Hi, I am</Title>
 
@@ -135,7 +137,7 @@ export default function AboutMe() {
 
 
             <Space className="animate__animated animate__fadeInUp animate__delay-2s" size="large" style={{ marginTop: 25 }}>
-                <ReactSVG className="social-icon" src="resources/social-icons/linkedin.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("linkedin")} />
+                <ReactSVG className="social-icon" src="resources/social-icons/linkedin.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("linkedin")}/>
                 <ReactSVG className="social-icon" src="resources/social-icons/github.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("github")} />
                 <ReactSVG className="social-icon" src="resources/social-icons/leetcode.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("leetcode")} />
             </Space>

@@ -1,31 +1,31 @@
+import { Divider, Space, Flex, Typography } from 'antd';
 import './App.css';
 import AboutMe from './components/about';
-import Skills from './components/skills';
 import Experience from './components/experience';
-import { ConfigProvider, Divider, Space } from 'antd';
+import NavBar from './components/nav';
 import Project from './components/project';
+import Skills from './components/skills';
+import { useRef } from 'react';
 
-function App() {
+
+const { Text } = Typography;
+
+export default function App() {
+  const aboutMeRef = useRef(null);
+  const skillsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectRef = useRef(null);
+
   return (
-    <ConfigProvider
-      theme={{
-        token: {
-          colorText: '#1C1C1C',
-          colorPrimary: '#1D4ED8',
-          fontFamily: 'Inter'
-        },
-      }}>
+    <>
+      <NavBar aboutMeRef={aboutMeRef} skillsRef={skillsRef} experienceRef={experienceRef} projectRef={projectRef} />
+
       <Space direction='vertical' size="large" style={{ width: "100vw" }}>
-        <AboutMe />
-        <Divider />
-        <Skills />
-        <Divider />
-        <Experience />
-        <Divider />
-        <Project />
+        <AboutMe aboutMeRef={aboutMeRef} />
+        <Skills skillsRef={skillsRef} />
+        <Experience experienceRef={experienceRef} />
+        <Project projectRef={projectRef} />
       </Space>
-    </ConfigProvider>
+    </>
   );
 }
-
-export default App;

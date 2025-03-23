@@ -8,11 +8,11 @@ const { Text, Title } = Typography;
 function displaySkill(skill) {
     return (
         <AnimationOnScroll
+            key={skill.displayName}
             animateIn="animate__animated animate__fadeInUp"
             animateOnce={true}
         >
             <Flex
-
                 gap="middle"
                 direction="horizontal"
                 align="center"
@@ -30,15 +30,19 @@ function displaySkill(skill) {
     );
 }
 
-export default function Skills() {
+export default function Skills(props) {
     return (
-        <div style={{ minHeight: "100vh" }}>
+        <div 
+            style={{ minHeight: "100vh", paddingTop: "7em" }}
+            ref={props.skillsRef ? props.skillsRef : null}
+        >
             <Title style={{ textAlign: "center" }}>Skills</Title>
 
             <Flex wrap justify="space-between" style={{ padding: "0 10%" }}>
                 {
                     skillsData.map(skill => (
                         <Space
+                            key={skill.displayName}
                             size="medium"
                             direction="vertical"
                             className="glass"

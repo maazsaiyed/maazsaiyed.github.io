@@ -7,7 +7,7 @@ const { Text, Title } = Typography;
 const titleCSS = { margin: 0 }
 const expCSS = { maxWidth: 450 }
 
-export default function Experience() {
+export default function Experience(props) {
 
     const timelineItems = experienceData
         .sort((edA, edB) => (edA.id < edB.id) ? 1 : -1)
@@ -39,7 +39,10 @@ export default function Experience() {
         }));
 
     return (
-        <div style={{ minHeight: "100vh" }}>
+        <div 
+            style={{ minHeight: "100vh", paddingTop: "7em" }}
+            ref={props.experienceRef ? props.experienceRef : null}
+        >
 
             <Title style={{ textAlign: "center" }}>Experience</Title>
 
