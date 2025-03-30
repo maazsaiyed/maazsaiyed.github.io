@@ -1,14 +1,12 @@
-import { Divider, Space, Flex, Typography } from 'antd';
-import './App.css';
-import AboutMe from './components/about';
-import Experience from './components/experience';
-import NavBar from './components/nav';
-import Project from './components/project';
-import Skills from './components/skills';
+import { ConfigProvider, Space } from 'antd';
 import { useRef } from 'react';
-
-
-const { Text } = Typography;
+import './App.css';
+import Home from './components/Home';
+import Experience from './components/Experience';
+import Nav from './components/Nav';
+import Project from './components/Project';
+import Skills from './components/Skills';
+import { lightTheme } from './resources/theme';
 
 export default function App() {
   const aboutMeRef = useRef(null);
@@ -17,15 +15,17 @@ export default function App() {
   const projectRef = useRef(null);
 
   return (
-    <>
-      <NavBar aboutMeRef={aboutMeRef} skillsRef={skillsRef} experienceRef={experienceRef} projectRef={projectRef} />
+    <ConfigProvider theme={lightTheme}>
+      <div style={lightTheme.background}>
+        <Nav aboutMeRef={aboutMeRef} skillsRef={skillsRef} experienceRef={experienceRef} projectRef={projectRef} />
 
-      <Space direction='vertical' size="large" style={{ width: "100vw" }}>
-        <AboutMe aboutMeRef={aboutMeRef} />
-        <Skills skillsRef={skillsRef} />
-        <Experience experienceRef={experienceRef} />
-        <Project projectRef={projectRef} />
-      </Space>
-    </>
+        <Space direction='vertical' size="large" style={{ width: "100vw" }}>
+          <Home aboutMeRef={aboutMeRef} />
+          <Skills skillsRef={skillsRef} />
+          <Experience experienceRef={experienceRef} />
+          <Project projectRef={projectRef} />
+        </Space>
+      </div>
+    </ConfigProvider>
   );
 }

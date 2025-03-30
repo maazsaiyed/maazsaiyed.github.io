@@ -2,7 +2,7 @@ import { Flex, Space, Typography } from "antd";
 
 const { Text } = Typography;
 
-export default function NavBar(props) {
+export default function Nav(props) {
 
     const scrollIntoView = section => {
         let dom = undefined;

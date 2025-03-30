@@ -2,6 +2,7 @@ import { theme as antdTheme, Flex, Space, Typography } from "antd";
 import { useRef } from "react";
 import { ReactSVG } from "react-svg";
 import { headlineTitles } from "../resources/headline";
+import ProfilePicture from "./ProfilePicture";
 
 const { Text, Title } = Typography;
 const { useToken } = antdTheme;
@@ -22,7 +23,7 @@ const socialNavigation = function (icon) {
     if (url !== undefined) window.open(url, "_blank");
 }
 
-export default function AboutMe(props) {
+export default function Home(props) {
 
     const titleRef = useRef(null);
 
@@ -102,45 +103,48 @@ export default function AboutMe(props) {
 
     return (
         <Flex
-            vertical
-            justify="center"
+            justify="space-between"
+            align="center"
             style={{
                 minHeight: "100vh",
                 padding: "0 20%"
             }}
             ref={props.aboutMeRef ? props.aboutMeRef : null}
         >
+            <Flex vertical>
 
-            <Title level={5} style={titleCSS}>Hi, I am</Title>
+                <Title level={5} style={titleCSS}>Hi, I am</Title>
 
-            <Title className="animate__animated animate__fadeInUp" style={{ ...titleCSS, ...{ fontSize: 70 } }}>Maaz Saiyed</Title>
+                <Title className="animate__animated animate__fadeInUp" style={{ ...titleCSS, ...{ fontSize: 70 } }}>Maaz Saiyed</Title>
 
-            <Title
-                id="design-title"
-                ref={titleRef}
-                level={2}
-                style={{
-                    ...titleCSS, ...{
-                        fontSize: 50,
-                        overflow: "hidden",
-                        textWrap: "nowrap",
-                        color: theme.colorPrimary
-                    }
-                }}
-            >
-                &nbsp;
-            </Title>
+                <Title
+                    id="design-title"
+                    ref={titleRef}
+                    level={2}
+                    style={{
+                        ...titleCSS, ...{
+                            fontSize: 50,
+                            color: theme.colorPrimary
+                        }
+                    }}
+                >
+                    &nbsp;
+                </Title>
 
-            <Text className="animate__animated animate__fadeInUp animate__delay-2s" style={titleCSS}>
-                Software Developer, specialising in web development, artificial intelligence, and data pipelines.
-            </Text>
+                <Text className="animate__animated animate__fadeInUp animate__delay-2s" style={titleCSS}>
+                    Software Developer, specialising in web development, artificial intelligence, and data pipelines.
+                </Text>
 
 
-            <Space className="animate__animated animate__fadeInUp animate__delay-2s" size="large" style={{ marginTop: 25 }}>
-                <ReactSVG className="social-icon" src="resources/social-icons/linkedin.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("linkedin")}/>
-                <ReactSVG className="social-icon" src="resources/social-icons/github.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("github")} />
-                <ReactSVG className="social-icon" src="resources/social-icons/leetcode.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("leetcode")} />
-            </Space>
-        </Flex >
+                <Space className="animate__animated animate__fadeInUp animate__delay-2s" size="large" style={{ marginTop: 25 }}>
+                    <ReactSVG className="social-icon" src="resources/social-icons/linkedin.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("linkedin")} />
+                    <ReactSVG className="social-icon" src="resources/social-icons/github.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("github")} />
+                    <ReactSVG className="social-icon" src="resources/social-icons/leetcode.svg" beforeInjection={svgFunc} onClick={_ => socialNavigation("leetcode")} />
+                </Space>
+            </Flex >
+
+            <ProfilePicture />
+
+        </Flex>
     );
 }

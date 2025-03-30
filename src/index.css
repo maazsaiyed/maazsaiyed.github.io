@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: hsla(195, 50%, 95%, 1);
+  /* background: hsla(195, 50%, 95%, 1); */
   background: linear-gradient(135deg, hsla(195, 50%, 95%, 1) 0%, hsla(0, 0%, 100%, 1) 49%, hsla(31, 57%, 93%, 1) 100%);
   background-size: auto 100vh;
   background-repeat: no-repeat;
