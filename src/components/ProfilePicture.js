@@ -4,7 +4,7 @@ export default function ProfilePicture() {
 
     return (
         <div>
-            <svg width={0} height={0} viewBox="0 0 100 100">
+            <svg width={0} height={0} viewBox="0 0 50 50">
                 <defs>
                     <clipPath id="shape">
                         <motion.path
@@ -33,12 +33,11 @@ export default function ProfilePicture() {
                     width: 500,
                     height: 500,
                     objectFit: "cover",
-                    transform: "scale(1.2)",
                     objectPosition: "90% -10%",
                     clipPath: "url(#shape)"
                 }}
                 initial={{ scale: 0 }}
-                animate={{ scale: 1.2 }}
+                animate={{ scale: 1 }}
                 transition={{ duration: 1 }}
             />
         </div>

@@ -7,6 +7,7 @@ import Nav from './components/Nav';
 import Project from './components/Project';
 import Skills from './components/Skills';
 import { lightTheme } from './resources/theme';
+import Footer from './components/Footer';
 
 export default function App() {
   const aboutMeRef = useRef(null);
@@ -24,6 +25,7 @@ export default function App() {
           <Skills skillsRef={skillsRef} />
           <Experience experienceRef={experienceRef} />
           <Project projectRef={projectRef} />
+          <Footer />
         </Space>
       </div>
     </ConfigProvider>
